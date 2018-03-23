@@ -42,15 +42,15 @@ const superSplit = (splittable, delimiters) => {
 	}
 
 	if (typeof splittable === 'string') {
-		const delimiter = delimiters.pop()
+		const delimiter = delimiters[delimiters.length - 1]
 		const split = splitString(splittable, delimiter)
-		return superSplit(split, delimiters)
+		return superSplit(split, delimiters.slice(0, -1))
 	}
 
 	if (Array.isArray(splittable)) {
-		const delimiter = delimiters.pop()
+		const delimiter = delimiters[delimiters.length - 1]
 		const split = splitArray(splittable, delimiter)
-		return superSplit(split, delimiters)
+		return superSplit(split, delimiters.slice(0, -1))
 	}
 
 	return false

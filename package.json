@@ -1,7 +1,7 @@
 {
 	"name": "super-split",
 	"main": "super-split",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "🔪  split string by delimiter array - delimiters retained",
 	"license": "MIT",
 	"repository": "F1LT3R/super-split",

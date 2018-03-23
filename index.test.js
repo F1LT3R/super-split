@@ -53,3 +53,13 @@ test('Make sure subRes filters out blank strings from the result', t => {
 	const expected = ['I', ' ', 'lik', 'e', ' ', 't', 'o', ' ', 'm', 'o', 'v', 'e', ' ', 'it,', ' ', 'm', 'o', 'v', 'e', ' ', 'it.']
 	t.deepEqual(result, expected)
 })
+
+test('Non destructive to delimiter array', t => {
+	const str = 'It was the best of times, it was the blurst of times.'
+	const delimiters = ['best', 'blurst']
+	const result = superSplit(str, delimiters)
+	const expected = ['It was the ', 'best', ' of times, it was the ', 'blurst', ' of times.']
+	t.deepEqual(result, expected)
+	t.is(delimiters.length, 2)
+})
+
