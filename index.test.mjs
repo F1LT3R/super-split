@@ -1,5 +1,5 @@
 import test from 'ava'
-import superSplit from '.'
+import superSplit from './index.js'
 
 test('Split string by delimiter array, keep delimiters', t => {
 	const str = 'I like to move it, move it.'

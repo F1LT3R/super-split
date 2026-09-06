@@ -9,7 +9,7 @@
 
 ## Install
 
-```
+```sh
 $ yarn add super-split
 ```
 
